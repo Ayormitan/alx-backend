@@ -1,15 +1,17 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ Lifocache class that inherits from BaseCaching
 """
 from base_caching import BaseCaching
 
 class LIFOCache(BaseCaching):
+    """ LIFO Caxching system defined """
+
     def __init__(self):
         super().__init__()
         self.order = []
 
     def put(self, key, item):
-        if key or item is None:
+        if key is None or item is None:
             return
         if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
             last_key = self.order.pop()
