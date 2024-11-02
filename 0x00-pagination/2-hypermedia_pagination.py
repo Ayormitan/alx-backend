@@ -6,6 +6,7 @@ import csv
 import math
 from typing import Dict, Any, List, Tuple
 
+
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """
     returning a given pagination parameter
